@@ -10,8 +10,10 @@ Predictors:
 - household_size #Number of family members
 - education_groups #The household head's education, simplified from raw data into 5 basic groups
 ## Tools and Project Focus ##
+
 Language & Libraries:
 - R (dplyr, patchwork, readxl, forcats, lmtest, car)
+  
 Project Focus:
 - Using Base R functions to calculate statistical diagnostics manually.
 - Applying log-transformations to handle highly skewed income and spending data.
