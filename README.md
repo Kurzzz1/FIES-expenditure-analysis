@@ -20,6 +20,14 @@ Project Focus:
 - Using Base R functions to calculate statistical diagnostics manually.
 - Applying log-transformations to handle highly skewed income and spending data.
 - Running transparent, classic assumption checks to understand the limits of a linear model.
+
+## ETL ##
+- Verified the dataset was complete for the selected variables, with no missing values and zero values.
+- Engineered target variable by aggregating expenditure (Restaurant and Hotels Expenditure, Alcoholic Beverages Expenditure, Tobacco Expenditure, Clothing, Footwear and Other Wear Expenditure, Miscellaneous Goods and Services Expenditure, Special Occasions Expenditure)
+- Cleaned up the messy raw education data by grouping dozens of individual grade levels into 5 simple tiers. This keeps the model from getting bogged down in the noise, making it much easier to see how, for instance, graduating high school or college—actually impacts spending.
+- Applied $\log_{10}$ transformations to both total income and discretionary spending to normalize the severe right-skewness typical in economic household data.
+
+
 ## Key Findings and Interpretation ##
 The regression model is highly statistically significant ($F(6, 41537) = 15,070$, $p < 2.2 \times 10^{-16}$) and explains 68.52% of the variance in log-discretionary spending (Adjusted $R^2 = 0.6852$).
 
