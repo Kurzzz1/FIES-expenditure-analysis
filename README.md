@@ -24,7 +24,7 @@ Project Focus:
 ## ETL ##
 - Verified the dataset was complete for the selected variables, with no missing values and zero values.
 - Engineered target variable by aggregating expenditure (Restaurant and Hotels Expenditure, Alcoholic Beverages Expenditure, Tobacco Expenditure, Clothing, Footwear and Other Wear Expenditure, Miscellaneous Goods and Services Expenditure, Special Occasions Expenditure)
-- Cleaned up the messy raw education data by grouping dozens of individual grade levels into 5 simple tiers. This keeps the model from getting bogged down in the noise, making it much easier to see how, for instance, graduating high school or college—actually impacts spending.
+- Cleaned up the messy raw education data by grouping dozens of individual grade levels into 5 simple tiers. This keeps the model from getting bogged down in the noise, making it much easier to see how, for instance, graduating high school or college impacts spending.
 - Applied $\log_{10}$ transformations to both total income and discretionary spending to normalize the severe right-skewness typical in economic household data.
 
 
