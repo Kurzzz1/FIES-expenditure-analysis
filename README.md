@@ -17,6 +17,12 @@ Project Focus:
 - Applying log-transformations to handle highly skewed income and spending data.
 - Running transparent, classic assumption checks to understand the limits of a linear model.
 ## Key Findings and Interpretation ##
-The regression model is highly statistically significant (F(6, 41537) = 15,070, p < 2.2 x 10e-16) and explains 68.52% of the variance in household discretionary spending (Adjusted R^2 = 0.6852).
-All included predictors are highly significant (p < 0.001). Because log-transformations were applied to handle extreme financial variance, the coefficients translate to the following real-world impacts:
-* Income Elasticity (Log-Log): Discretionary spending exhibits a nearly perfect 1:1 elasticity with income (B $\approx$ 1.001). For every 10% increase in total household income, discretionary spending increases proportionally by 10%.
+The regression model is highly statistically significant ($F(6, 41537) = 15,070$, $p < 2.2 \times 10^{-16}$) and explains 68.52% of the variance in log-discretionary spending (Adjusted $R^2 = 0.6852$).
+All predictors are highly significant ($p < 0.001$). Holding all other variables constant, the raw coefficients ($\beta$) are interpreted directly on the $\log_{10}$ scale relative to the baseline characteristics:
+* Log-Total Household Income: Shows a strong, positive relationship ($\beta = 1.0010$). Since both the predictor and response are log-transformed, this represents a near-unitary elasticity where changes in income reflect proportional shifts in discretionary spending.
+* Household Size: Shows a positive coefficient ($\beta = 0.0105$), indicating that every additional family member marginally shifts the log-discretionary spending baseline upward.
+* Educational Attainment (Relative to 'No Formal Education'): All educational tiers exhibit positive, statistically significant shifts in discretionary spending compared to the baseline group:
+  - Basic Education: $\beta = 0.1068$
+  - High School Graduate: $\beta = 0.1683$
+  - Undergraduate: $\beta = 0.1699$
+  - College Graduate: $\beta = 0.1581$
