@@ -26,3 +26,7 @@ All predictors are highly significant ($p < 0.001$). Holding all other variables
   - High School Graduate: $\beta = 0.1683$
   - Undergraduate: $\beta = 0.1699$
   - College Graduate: $\beta = 0.1581$
+<img width="837" height="482" alt="image" src="https://github.com/user-attachments/assets/b55473d9-0ec1-4d3f-9504-e33eae731a71" />
+
+
+
