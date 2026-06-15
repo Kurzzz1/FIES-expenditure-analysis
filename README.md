@@ -50,42 +50,42 @@ Linearity (Residuals vs. Fitted Plot)
 
 
 - Observation: The red line stays pretty flat and hugs the horizontal dashed line at 0 across almost all of the data points.
-- Verdict: The linearity assumption holds up well here. It shows that a straight-line model is a great fit for the data, and there aren't any weird hidden curves throwing off the predictions.
+- Verdict: The linearity assumption holds up well here. It shows that a straight-line model fits the data quite well and that no strange hidden curves are messing with the predictions.
   
 Independence of Errors (ACF Plot)
 
 <img width="1382" height="887" alt="image" src="https://github.com/user-attachments/assets/9e3501e4-28e6-4b86-9993-d5dc378b6025" />
 
-- Observation: The vertical bars on the plot stick out way past the blue dashed lines in a clear, downward wave instead of looking like random, messy spikes.
-- Verdict: The independence assumption doesn't hold here. In a massive survey like this, this kind of pattern usually pops up because of a group effect—like neighbors or families living in the same region naturally sharing similar local spending habits.
+- Observation: The vertical bars on the plot stick out much past the blue dashed lines in a clear, downward wave instead of looking like random, jumbled spikes.
+- Verdict: The independence assumption doesn't hold here. This type of pattern typically appears in a large study like this due to a group effect, such as neighbors or families in the same area naturally having similar local spending habits.
   
 Homoscedasticity (Breusch-Pagan Test)
 
 <img width="405" height="96" alt="image" src="https://github.com/user-attachments/assets/84c0e9ec-7071-42bb-b2f9-07720bc761eb" />
 
-- Observation: The Breusch-Pagan test returns a tiny p-value ($p < 2.2 \times 10^{-16}$), which completely rules out the idea of a perfectly uniform spread.
-- Verdict: Heteroscedasticity is present, but it is 100% expected here. In real-world economics, higher-income households have wildly different spending habits—some save a ton, others spend heavily on leisure—while lower-income households are locked into a tighter budget. That natural widening of choices as income grows is exactly why the variance spreads out.
+- Observation: The Breusch-Pagan test returns a tiny p-value ($p < 2.2 \times 10^{-16}$), which completely rules out the idea of a equal variance.
+- Verdict: Although heteroscedasticity is present, this is completely expected. In real-world economics, lower-income households are constrained by a smaller budget, whereas higher-income households have significantly different spending patterns—some save a lot, while others spend a lot on leisure. The variance expands out precisely because of this inherent expansion of options as wealth increases.
 
 Multicollinearity (GVIF)
 
 <img width="597" height="77" alt="image" src="https://github.com/user-attachments/assets/47552302-781f-4d44-b9e6-b268789a1b34" />
 
 - Observation: The Generalized VIF values for all predictor variables are incredibly low, sitting safely between 1.14 and 1.54.
-- Verdict: Multicollinearity is definitely not an issue here. Because the values are all super close to 1 and nowhere near the typical red-flag thresholds of 5 or 10, it proves that income, household size, and education aren't overlapping or stepping on each other's toes. Your model can cleanly isolate the impact of each variable.
+- Verdict: Multicollinearity is not a problem in this case. The fact that all of the values are extremely close to 1 and far from the usual red-flag values of 5 or 10 shows that income, household size, and education are not overlapping or interfering with one another. Each variable's impact may be neatly isolated by the model itself.
 
 Influential Points (Cook's Distance)
 
 <img width="830" height="553" alt="image" src="https://github.com/user-attachments/assets/22794eb6-f58d-415e-9124-93335822b9f1" />
 
-- Observation: The plot shows that the highest spike (observation 21954) only reaches about 0.0035, which is nowhere near the standard red-flag threshold of 0.5. Even though the data contains 642 outliers and 2,948 high-leverage points, they are completely flat on this scale.
-- Verdict: There are zero influential points pulling the strings. This proves that even though a massive survey like the FIES naturally has some extreme spending anomalies or unique family setups, none of them have enough power to single-handedly tilt or warp the regression lines. The coefficients are completely stable and robust.
+- Observation: The highest spike (observation 21954) in the plot barely reaches roughly 0.0035, which is far below the typical red-flag threshold of 0.5. The data is entirely flat on this scale despite having 2,948 high-leverage points and 642 outliers.
+- Verdict: There are zero influential points. This shows that, despite the fact that a large survey such as the FIES always contains some extreme expenditure anomalies or unique family setups, none of these are strong enough to cause the regression lines to tilt or warp on their own. The coefficients are robust and completely stable.
 
 
 Normality of Errors (Normal Q-Q Plot)
 
 <img width="830" height="553" alt="image" src="https://github.com/user-attachments/assets/70630406-3a89-4cfb-b5ac-1527d424d9a1" />
 
-- Observation: The points track the straight red reference line closely through the center but curve away at both ends—dipping below the line on the left and rising above it on the right. This classic pattern indicates a heavy-tailed distribution rather than a perfect normal curve.
-- Verdict: While the strict normality assumption is technically violated at the extremes, it does not compromise the model. Thanks to the massive sample size of over 41,000 households, the Central Limit Theorem (CLT) guarantees that all statistical inferences, p-values, and confidence intervals remain completely valid and reliable.
+- Observation: The points closely follow the straight red reference line through the middle, but at both ends they curve away, rising above the line on the right and falling below it on the left. Rather than a perfect normal curve, this typical shape suggests a heavy-tailed distribution.
+- Verdict: Although the strict normality assumption is technically violated at the extremes, the model is unaffected. The Central Limit Theorem (CLT) ensures that all statistical conclusions, p-values, and confidence intervals remain fully valid and reliable because of the enormous sample size of almost 41,000 households.
 
 
