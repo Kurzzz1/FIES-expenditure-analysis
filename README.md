@@ -32,9 +32,9 @@ Project Focus:
 The regression model is highly statistically significant ($F(6, 41537) = 15,070$, $p < 2.2 \times 10^{-16}$) and explains 68.52% of the variance in log-discretionary spending (Adjusted $R^2 = 0.6852$).
 
 All predictors are highly significant ($p < 0.001$). Holding all other variables constant, the raw coefficients ($\beta$) are interpreted directly on the $\log_{10}$ scale relative to the baseline characteristics:
-* Log-Total Household Income: Shows a strong, positive relationship ($\beta = 1.0010$). Since both the predictor and response are log-transformed, this represents a near-unitary elasticity where changes in income reflect proportional shifts in discretionary spending.
-* Household Size: Shows a positive coefficient ($\beta = 0.0105$), indicating that every additional family member marginally shifts the log-discretionary spending baseline upward.
-* Educational Attainment (Relative to 'No Formal Education'): All educational tiers exhibit positive, statistically significant shifts in discretionary spending compared to the baseline group:
+* Log-Total Household Income: Shows a strong, positive relationship ($\beta = 1.0010$). This indicates a near-uniform elasticity where changes in income reflect proportionate variations in discretionary spending because both the predictor and response are log-transformed.
+* Household Size: Shows a positive coefficient ($\beta = 0.0105$), indicating that every additional family member slightly shifts the log-discretionary spending baseline upward.
+* Educational Attainment (Relative to 'No Formal Education'): In comparison to the baseline group, all educational levels show positive, statistically significant changes in discretionary spending:
   - Basic Education: $\beta = 0.1068$
   - High School Graduate: $\beta = 0.1683$
   - Undergraduate: $\beta = 0.1699$
